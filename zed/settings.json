@@ -1,0 +1,163 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "cli_default_open_behavior": "existing_window",
+  "format_on_save": "off",
+  "diff_view_style": "unified",
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "languages": {
+    "TOML": {
+      "show_edit_predictions": false
+    },
+    "Kdl": {
+      "show_edit_predictions": false
+    },
+    "TypeScript": {
+      "show_edit_predictions": true
+    }
+  },
+  "edit_predictions": {
+    "open_ai_compatible_api": {
+      "max_output_tokens": 1000,
+      "model": "gemma-4-12b-qat",
+      "api_url": "http://localhost:1234"
+    },
+    "mode": "subtle",
+    "ollama": {
+      "api_url": "https://ollama.icefish-snares.ts.net",
+      "prompt_format": "code_gemma",
+      "model": "gemma4:e2b"
+    },
+    "provider": "open_ai_compatible_api"
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://unraid:11434"
+    }
+  },
+  "terminal": {
+    "font_size": 13.0
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+    },
+  },
+  "show_edit_predictions": false,
+  "tab_size": 2,
+  "project_panel": {
+    "folder_indicator": "chevron",
+    "dock": "left",
+    "auto_reveal_entries": false,
+    "hide_root": true,
+  },
+  "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
+    "default_profile": "ask",
+    "default_model": {
+      "enable_thinking": false,
+      "provider": "lmstudio",
+      "model": "google/gemma-4-12b-qat",
+    },
+    "model_parameters": [],
+  },
+  "unnecessary_code_fade": 0.6,
+  "buffer_font_family": ".ZedMono",
+  "ui_font_family": "Adwaita Sans",
+  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false,
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+  "base_keymap": "JetBrains",
+  "formatter": "auto",
+
+  // APPERANCE
+  "ui_font_size": 17,
+  "buffer_font_size": 14.0,
+  "buffer_line_height": {
+    "custom": 1.7,
+  },
+  "agent_buffer_font_size": 13.0,
+  "agent_ui_font_size": 17.0,
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Light",
+    "dark": "VSCode Dark Modern",
+  },
+  "theme_overrides": {
+    "Ayu Dark": {
+      "text": "#adadad",
+      "editor.gutter.background": "#1a1a1a",
+      "editor.background": "#1a1a1a",
+
+      "syntax": {
+        // "function": {
+        //   "color": "#9A71A8"
+        // },
+        "attributes": {
+          // "color": "#fff"
+        },
+        "boolean": {
+          "color": "#6A8759",
+        },
+        "string": {
+          "color": "#6A8759",
+        },
+        "type": {
+          "color": "#5295A4",
+        },
+        "punctuation": {
+          "color": "#CC7832",
+        },
+        "punctuation.bracket.parenthesis": {
+          // "color": "#CC7832"
+        },
+        "punctuation.delimiter": {
+          "color": "#CC7832",
+        },
+        "punctuation.list_marker": {
+          "color": "#CC7832",
+        },
+        "punctuation.special": {
+          "color": "#CC7832",
+        },
+        "operator": {
+          "color": "#CC7832",
+        },
+        "tag": {
+          "color": "#5295A4",
+        },
+        "property": {
+          "color": "#adadad",
+        },
+        "label": {
+          "color": "#ffffff",
+        },
+        "attribute": {
+          "color": "#adadad",
+        },
+      },
+    },
+  },
+}

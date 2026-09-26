@@ -10,6 +10,7 @@ environment {
   XDG_SESSION_TYPE "wayland"
 }
 
+spawn-at-startup "dotfiles-pull.sh"
 spawn-at-startup "noctalia"
 spawn-at-startup "vicinae" "server"
 spawn-at-startup "kdeconnect-indicator"

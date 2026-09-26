@@ -1,0 +1,19 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+/",
+    "command": "runCommands",
+    "when": "editorTextFocus && !editorReadonly",
+    "args": {
+      "commands": [
+        "editor.action.commentLine",
+        "cursorDown"
+      ]
+    }
+  },
+  {
+    "key": "ctrl+shift+/",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly",
+  }
+]

@@ -6,12 +6,17 @@
 - clean: ['~']
 
 - clean: ['~/bin']
+- link:  { ~/bin: bin }
+
+- clean:
+    - ~/.config/fish/completions
+    - ~/.config/fish/config.fish
 - link:
-    ~/bin: bin
+    ~/.config/fish/completions: fish/completions
+    ~/.config/fish/config.fish: fish/config.fish
 
 - clean: ['~/.config/niri']
-- link:
-    ~/.config/niri: niri
+- link:  { ~/.config/niri: niri }
 
 - clean:
     - ~/.config/noctalia
@@ -20,15 +25,21 @@
     ~/.config/noctalia: noctalia/config
     ~/.local/state/noctalia/settings.toml: noctalia/state/settings.toml
 
-- clean:
-    - ~/.config/ghostty
-- link:
-    ~/.config/ghostty: ghostty
+- clean: ['~/.config/ghostty']
+- link:  { ~/.config/ghostty: ghostty }
+
+- clean: ['~/.config/vicinae']
+- link:  { ~/.config/vicinae: vicinae }
 
 - clean:
-    - ~/.config/vicinae
+    - ~/.config/VSCodium/User/settings.json
+    - ~/.config/VSCodium/User/keybindings.json
 - link:
-    ~/.config/vicinae: vicinae
+    ~/.config/VSCodium/User/settings.json: VSCodium/settings.json
+    ~/.config/VSCodium/User/keybindings.json: VSCodium/keybindings.json
+
+- clean: ['~/.config/zed']
+- link:  { ~/.config/zed: zed }
 
 # - shell:
   # - [git submodule update --init --recursive, Installing submodules]
