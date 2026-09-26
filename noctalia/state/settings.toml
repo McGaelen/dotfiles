@@ -5,7 +5,7 @@ order = [ "default" ]
 
     [bar.default]
     background_opacity = 0.53999998793005943
-    center = [ "taskbar", "hello" ]
+    center = [ "taskbar", "niri-taskbar-minimap" ]
     end = [ "tray", "notifications", "brightness", "volume", "network", "control-center", "clock", "session" ]
     font_family = "Adwaita Sans"
     font_weight = 700
@@ -17,7 +17,7 @@ order = [ "default" ]
     radius_bottom_left = 0
     radius_bottom_right = 0
     shadow = false
-    start = [ "Vicinae", "workspaces", "media", "privacy", "custom_button_2" ]
+    start = [ "Vicinae", "workspaces", "media", "privacy" ]
     thickness = 30
     widget_spacing = 14
 
@@ -209,7 +209,7 @@ media = false
 privacy = false
 
 [plugins]
-enabled = [ "noctalia/example" ]
+enabled = [ "mcgaelen/niri-taskbar-minimap" ]
 
     [[plugins.source]]
     kind = "git"
@@ -223,7 +223,7 @@ enabled = [ "noctalia/example" ]
 
     [[plugins.source]]
     kind = "path"
-    location = "~/dev/noctalia-plugins"
+    location = "~/.config/noctalia/my-plugins"
     name = "my-plugins"
 
 [shell]
@@ -323,24 +323,14 @@ format = "{:%l:%M %p}"
 [widget.control-center]
 glyph = "settings-filled"
 
-[widget.custom_button_2]
-type = "custom_button"
-
-    [widget.custom_button_2.actions]
-    left = "panel-toggle launcher"
-
-[widget.hello]
-focused_background = "primary"
-focused_text = "on_primary"
-inactive_background = "surface_variant"
-inactive_text = "on_surface"
-type = "noctalia/example:hello"
-
 [widget.media]
 hide_when_no_media = true
 
 [widget.network]
 show_label = false
+
+[widget.niri-taskbar-minimap]
+type = "mcgaelen/niri-taskbar-minimap:niri-taskbar-minimap"
 
 [widget.privacy]
 hide_inactive = true

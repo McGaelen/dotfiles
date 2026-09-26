@@ -1,6 +1,7 @@
-# - defaults:
-#     link:
-#       relink: true
+- defaults:
+    link:
+      create: true
+      backup: true
 
 - clean: ['~']
 
@@ -18,6 +19,8 @@
 - link:
     ~/.config/noctalia: noctalia/config
     ~/.local/state/noctalia/settings.toml: noctalia/state/settings.toml
+
+
 
 # - shell:
   # - [git submodule update --init --recursive, Installing submodules]
