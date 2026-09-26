@@ -1,3 +1,3 @@
 #!/usr/bin/env fish
 
-cd ~/dotfiles && git pull
+cd ~/dotfiles && git pull && ./install
