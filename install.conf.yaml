@@ -20,7 +20,15 @@
     ~/.config/noctalia: noctalia/config
     ~/.local/state/noctalia/settings.toml: noctalia/state/settings.toml
 
+- clean:
+    - ~/.config/ghostty
+- link:
+    ~/.config/ghostty: ghostty
 
+- clean:
+    - ~/.config/vicinae
+- link:
+    ~/.config/vicinae: vicinae
 
 # - shell:
   # - [git submodule update --init --recursive, Installing submodules]
