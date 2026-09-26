@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-cd ~/dotfffiles && git pull && ./install
+cd ~/dotfiles && git pull && ./install
 
 if test $status != 0
   # Need to sleep, because this could be run before noctalia (or another notification manager) starts up.
