@@ -1,0 +1,57 @@
+# Minimal reference plugin. Demonstrates the full bar-widget pipeline:
+# static manifest -> appears in the Add-widget picker -> renders/ticks ->
+# manifest-driven settings -> onIpc. Also ships a launcher provider that shows
+# launcher.setQuery() (type `/ex`).
+# See noctalia-docs plugins guide.
+
+id = "mcgaelen/niri-taskbar-minimap"
+name = "Niri Taskbar Minimap"
+version = "1.0.0"
+plugin_api = 9
+author = "McGaelen"
+license = "MIT"
+dependencies = []
+tags = ["taskbar"]
+icon = "puzzle"
+description = "A taskbar which shows the relative size of windows in the current Niri workspace."
+
+[[widget]]
+id = "niri-taskbar-minimap"
+entry = "niri-taskbar-minimap.luau"
+
+[[widget.setting]]
+key = "inactive_background"
+type = "color"
+label_key = "settings.inactive_background.label"
+description_key = "settings.inactive_background.description"
+default = "#2a2a2a"
+
+[[widget.setting]]
+key = "focused_background"
+type = "color"
+label_key = "settings.focused_background.label"
+description_key = "settings.focused_background.description"
+default = "#3a3a3a"
+
+[[widget.setting]]
+key = "inactive_text"
+type = "color"
+label_key = "settings.inactive_text.label"
+description_key = "settings.inactive_text.description"
+default = "#ffffff"
+
+[[widget.setting]]
+key = "focused_text"
+type = "color"
+label_key = "settings.focused_text.label"
+description_key = "settings.focused_text.description"
+default = "#ffffff"
+
+[[widget.setting]]
+key = "max_width"
+type = "int"
+label_key = "settings.max_width.label"
+description_key = "settings.max_width.description"
+default = 1000
+min = 100
+max = 4000

@@ -1,0 +1,12 @@
+{
+  "settings.inactive_background.label": "Inactive window background",
+  "settings.inactive_background.description": "Background color used by windows that are not focused.",
+  "settings.focused_background.label": "Focused window background",
+  "settings.focused_background.description": "Background color used by the focused window.",
+  "settings.inactive_text.label": "Inactive window text",
+  "settings.inactive_text.description": "Text color used by windows that are not focused.",
+  "settings.focused_text.label": "Focused window text",
+  "settings.focused_text.description": "Text color used by the focused window.",
+  "settings.max_width.label": "Maximum bar width",
+  "settings.max_width.description": "Maximum width of the taskbar on this monitor, in pixels."
+}
