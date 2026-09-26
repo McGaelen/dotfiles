@@ -1,0 +1,23 @@
+# - defaults:
+#     link:
+#       relink: true
+
+- clean: ['~']
+
+- clean: ['~/bin']
+- link:
+    ~/bin: bin
+
+- clean: ['~/.config/niri']
+- link:
+    ~/.config/niri: niri
+
+- clean:
+    - ~/.config/noctalia
+    - ~/.local/state/noctalia
+- link:
+    ~/.config/noctalia: noctalia/config
+    ~/.local/state/noctalia/settings.toml: noctalia/state/settings.toml
+
+# - shell:
+  # - [git submodule update --init --recursive, Installing submodules]

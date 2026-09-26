@@ -1,0 +1,59 @@
+include "input.kdl"
+include "layout.kdl"
+include "window-rules.kdl"
+include "binds.kdl"
+include "outputs.kdl"
+//hello
+environment {
+  ELECTRON_OZONE_PLATFORM_HINT "auto"
+  QT_QPA_PLATFORMTHEME "qt6ct"
+  XDG_SESSION_TYPE "wayland"
+}
+
+spawn-at-startup "noctalia"
+spawn-at-startup "vicinae" "server"
+spawn-at-startup "kdeconnect-indicator"
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+animations {
+  slowdown 0.3
+}
+
+cursor {
+  xcursor-theme "breeze_cursors"
+  xcursor-size 28
+  hide-when-typing
+}
+
+recent-windows { on; }
+
+gestures {
+  hot-corners { off; }
+}
+
+layer-rule {
+  match namespace="vicinae"
+  match namespace="noctalia-notification"
+  background-effect {
+    xray false
+  }
+}
+
+layer-rule {
+  match namespace="^noctalia-wallpaper*"
+  place-within-backdrop true
+}
+
+overview {
+  workspace-shadow {
+    off
+  }
+}
+
+debug {
+    // Allows notification actions and window activation from Noctalia.
+    honor-xdg-activation-with-invalid-serial
+}
+
+include "noctalia.kdl"

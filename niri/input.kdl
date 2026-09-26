@@ -1,0 +1,21 @@
+input {
+  keyboard {
+    numlock
+  }
+
+  touchpad {
+    tap
+    natural-scroll
+    accel-speed 0
+    accel-profile "adaptive"
+    scroll-factor 0.3
+  }
+
+  mouse {
+    // Disabling mouse accel: https://github.com/YaLTeR/niri/discussions/1917
+    accel-speed -0.65 // between 1 and -1
+    accel-profile "flat"
+  }
+}
+
+include optional=true "screenshare-mode.kdl"

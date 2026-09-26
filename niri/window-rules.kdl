@@ -1,0 +1,61 @@
+// Global Rules
+window-rule {
+  geometry-corner-radius 14
+  clip-to-geometry true
+  background-effect {
+    blur true
+    xray false
+  }
+}
+
+// Variable Refresh Rate (VRR)
+window-rule {
+  // is-active=true means it only applies when the game window is focused.
+  match app-id=r#"^steam_app_[\d]+$"# is-active=true
+  // Replace <game window title> if a game isn't launched from steam
+  // match title="<game window title>" is-active=true
+  variable-refresh-rate true
+}
+
+// Open games full screen
+window-rule {
+  match app-id=r#"^steam_app_[\d]+$"#
+  open-fullscreen true
+}
+
+// ========= Floating Windows ========= 
+window-rule {
+  match is-floating=true
+  border { off; }
+}
+
+window-rule {
+  match is-floating=true is-active=true
+  shadow {
+    on
+    color "#000000"
+    softness 75
+    spread -6
+    offset x=0 y=10
+  }
+}
+
+window-rule {
+  match is-floating=true is-active=false
+  shadow {
+    on
+    color "#000000"
+    softness 75
+    spread -20
+    offset x=0 y=10
+  }
+}
+
+// Windows to open floating as default
+window-rule {
+  match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+  match app-id="thunar"
+  match app-id="com.github.finefindus.eyedropper"
+  match app-id="it.mijorus.gearlever"
+  open-floating true
+}

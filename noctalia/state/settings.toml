@@ -1,0 +1,365 @@
+config_version = 14
+
+[bar]
+order = [ "default" ]
+
+    [bar.default]
+    background_opacity = 0.53999998793005943
+    center = [ "taskbar", "hello" ]
+    end = [ "tray", "notifications", "brightness", "volume", "network", "control-center", "clock", "session" ]
+    font_family = "Adwaita Sans"
+    font_weight = 700
+    margin_ends = 0
+    padding = 10
+    panel_overlap = 0
+    position = "bottom"
+    radius = 14
+    radius_bottom_left = 0
+    radius_bottom_right = 0
+    shadow = false
+    start = [ "Vicinae", "workspaces", "media", "privacy", "custom_button_2" ]
+    thickness = 30
+    widget_spacing = 14
+
+        [bar.default.monitor.DP-2]
+
+[brightness]
+enable_ddcutil = true
+
+[calendar]
+
+[control_center]
+sidebar = "none"
+sidebar_section = "none"
+width = 600
+
+    [control_center.calendar]
+    show_events_card = false
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "dark_mode"
+
+    [[control_center.shortcuts]]
+    type = "system"
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 5
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 300.0
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@DP-3",
+    "lockscreen-login-box@winit",
+    "lockscreen-login-box@DP-1",
+    "lockscreen-login-box@DP-2"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 1280.0
+    cy = 1321.0003662109375
+    output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 640.0
+    cy = 905.0
+    output = "DP-2"
+    placement_height = 1024.0
+    placement_width = 1280.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-3"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1280.0
+    cy = 1258.0
+    output = "DP-3"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-3".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@winit"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 625.5799560546875
+    cy = 775.56451416015625
+    output = "winit"
+    placement_height = 1374.0
+    placement_width = 1263.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@winit".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[nightlight]
+enabled = true
+force = true
+temperature_night = 4600
+
+[notification]
+background_opacity = 0.69999998435378075
+layer = "overlay"
+
+[osd.kinds]
+keyboard_layout = false
+lock_keys = false
+media = false
+privacy = false
+
+[plugins]
+enabled = [ "noctalia/example" ]
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+    [[plugins.source]]
+    kind = "path"
+    location = "~/dev/noctalia-plugins"
+    name = "my-plugins"
+
+[shell]
+clipboard_enabled = false
+clipboard_keep_from_closed_apps = false
+font_family = "Adwaita Sans"
+polkit_agent = true
+
+    [shell.animation]
+    speed = 3.0000000447034836
+
+    [shell.greeter_sync]
+    auto_sync = true
+
+    [shell.panel]
+    open_near_click_control_center = true
+    open_near_click_session = true
+    open_near_click_wallpaper = true
+    transparency_mode = "soft"
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    countdown_seconds = 0.0
+    enabled = true
+    label = "Sleep"
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "2"
+    variant = "destructive"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "4"
+    variant = "destructive"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "5"
+    variant = "destructive"
+
+[system.monitor]
+gpu_poll_seconds = 2
+
+[theme]
+source = "wallpaper"
+wallpaper_scheme = "m3-tonal-spot"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "niri", "qt" ]
+    community_ids = [ "vicinae" ]
+
+[wallpaper]
+directory = "/usr/share/wallpapers"
+
+    [wallpaper.default]
+    path = "/usr/share/wallpapers/cachyos-wallpapers/Dimensions.png"
+
+    [wallpaper.last]
+    path = "/usr/share/wallpapers/cachyos-wallpapers/Dimensions.png"
+
+    [wallpaper.monitors.DP-1]
+    path = "/usr/share/wallpapers/cachyos-wallpapers/Dimensions.png"
+
+    [wallpaper.monitors.DP-2]
+    path = "/usr/share/wallpapers/cachyos-wallpapers/Dimensions.png"
+
+[widget.Vicinae]
+glyph = "apps-filled"
+tooltip = "Launcher"
+type = "custom_button"
+
+    [widget.Vicinae.actions]
+    left = "exec vicinae open"
+
+[widget.brightness]
+show_label = false
+
+[widget.clock]
+format = "{:%l:%M %p}"
+
+[widget.control-center]
+glyph = "settings-filled"
+
+[widget.custom_button_2]
+type = "custom_button"
+
+    [widget.custom_button_2.actions]
+    left = "panel-toggle launcher"
+
+[widget.hello]
+focused_background = "primary"
+focused_text = "on_primary"
+inactive_background = "surface_variant"
+inactive_text = "on_surface"
+type = "noctalia/example:hello"
+
+[widget.media]
+hide_when_no_media = true
+
+[widget.network]
+show_label = false
+
+[widget.privacy]
+hide_inactive = true
+inactive_color = "on_primary"
+
+[widget.session]
+color = "error"
+
+[widget.taskbar]
+capsule_border = "primary"
+capsule_padding = 19
+capsule_radius = "auto"
+enabled = false
+icon_scale = 1.5
+show_window_title = true
+window_title_max_width = 150
+
+[widget.tray]
+drawer = true
+
+[widget.volume]
+show_label = false

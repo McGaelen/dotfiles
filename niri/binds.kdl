@@ -1,0 +1,137 @@
+binds {
+  // Show hotkeys list
+  Mod+Shift+Slash { show-hotkey-overlay; }
+
+  // Vicinae
+  Mod+Space hotkey-overlay-title="Run an Application: vicinae" {
+    spawn "vicinae" "open";
+//     spawn "dms" "ipc" "call" "spotlight" "toggle"
+  }
+  Mod+Shift+V repeat=false {
+    spawn "vicinae" "vicinae://launch/clipboard/history";
+//     spawn "dms" "ipc" "call" "clipboard" "toggle"
+  }
+  Mod+Ctrl+Space repeat=false {
+    spawn "vicinae" "vicinae://launch/core/search-emojis";
+  }
+  Mod+Shift+F repeat=false {
+    spawn "vicinae" "vicinae://launch/files/search";
+  }
+
+  // Quitting apps
+  Mod+Q repeat=false { close-window; }
+
+  // Overview
+  Mod+Tab repeat=false { toggle-overview; }
+
+  // Switching Windows:
+  // Use arrow keys to switch windows.
+  // Add Ctrl to switch monitors.
+  Mod+Up { focus-window-up; }
+  Mod+Down { focus-window-down; }
+  Mod+Left { focus-column-left; }
+  Mod+Right { focus-column-right; }
+  Mod+WheelScrollUp { focus-column-left; }
+  Mod+WheelScrollDown { focus-column-right; }
+  Mod+Ctrl+Up { focus-monitor-up; }
+  Mod+Ctrl+Down { focus-monitor-down; }
+  Mod+Ctrl+Left { focus-monitor-left; }
+  Mod+Ctrl+Right { focus-monitor-right; }
+  Mod+Ctrl+WheelScrollUp { focus-monitor-left; }
+  Mod+Ctrl+WheelScrollDown { focus-monitor-right; }
+
+  // Switching Workspaces:
+  // Mod+Ctrl+Shift and Scroll wheel will move up and down workspaces.
+  Mod+Ctrl+Shift+WheelScrollUp { focus-workspace-up; }
+  Mod+Ctrl+Shift+WheelScrollDown { focus-workspace-down; }
+
+  // Moving windows:
+  // Same as switching windows, but add Shift.
+  Mod+Shift+Up { move-window-up; }
+  Mod+Shift+Down { move-window-down; }
+  Mod+Shift+Left { consume-or-expel-window-left; }
+  Mod+Shift+Right { consume-or-expel-window-right; }
+  Mod+Shift+WheelScrollUp { consume-or-expel-window-left; }
+  Mod+Shift+WheelScrollDown { consume-or-expel-window-right; }
+  Mod+Shift+Ctrl+Up { move-column-to-monitor-up; }
+  Mod+Shift+Ctrl+Down { move-column-to-monitor-down; }
+  Mod+Shift+Ctrl+Left { move-column-to-monitor-left; }
+  Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
+
+  // Sizing windows
+  Mod+1 { set-column-width "25%"; }
+  Mod+2 { set-column-width "33.33333333333333333334%"; }
+  Mod+3 { set-column-width "50%"; }
+  Mod+4 { set-column-width "66.66666666666666666667%"; }
+  Mod+5 { maximize-window-to-edges; }
+  Mod+Shift+1 { set-window-height "25%"; }
+  Mod+Shift+2 { set-window-height "33%"; }
+  Mod+Shift+3 { set-window-height "50%"; }
+  Mod+Shift+4 { set-window-height "66%"; }
+  Mod+Shift+5 { set-window-height "100%"; }
+
+  // Floating windows
+  Mod+R { toggle-window-floating; }
+  Mod+Shift+R { switch-focus-between-floating-and-tiling; }
+
+  // Tabbed windows
+  Mod+T { toggle-column-tabbed-display; }
+
+  // Screenshots
+  Mod+Shift+S { screenshot; }
+
+  // Applications such as remote-desktop clients and software KVM switches may
+  // request that niri stops processing the keyboard shortcuts defined here
+  // so they may, for example, forward the key presses as-is to a remote machine.
+  // It's a good idea to bind an escape hatch to toggle the inhibitor,
+  // so a buggy application can't hold your session hostage.
+  //
+  // The allow-inhibiting=false property can be applied to other binds as well,
+  // which ensures niri always processes them, even when an inhibitor is active.
+  Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+  // Session controls
+  Mod+Shift+L {
+    spawn-sh "noctalia msg session lock";
+  }
+  Mod+Shift+E { quit; }
+  Ctrl+Alt+Delete { spawn-sh "ghostty"; }
+
+  // Powers off the monitors. To turn them back on, do any input like
+  // moving the mouse or pressing any other key.
+  Mod+Shift+P { power-off-monitors; }
+
+  // ─── Media Controls ───
+  XF86AudioRaiseVolume                allow-when-locked=true {
+    spawn-sh "noctalia msg volume-up";
+  }
+  XF86AudioLowerVolume                allow-when-locked=true {
+    spawn-sh "noctalia msg volume-down";
+  }
+  XF86AudioMute                       allow-when-locked=true {
+    spawn-sh "noctalia msg volume-mute";
+  }
+  XF86AudioMicMute                    allow-when-locked=true {
+    spawn-sh "noctalia msg volume mic-mute";
+  }
+  XF86AudioNext                       allow-when-locked=true {
+    spawn-sh "noctalia msg media next";
+  }
+  XF86AudioPrev                       allow-when-locked=true {
+    spawn-sh "noctalia msg media previous";
+  }
+  XF86AudioPlay                       allow-when-locked=true {
+    spawn-sh "noctalia msg media toggle";
+  }
+  XF86AudioPause                      allow-when-locked=true {
+    spawn-sh "noctalia msg media toggle";
+  }
+
+  // ─── Brightness Controls ───
+  XF86MonBrightnessUp                 allow-when-locked=true {
+    spawn-sh "noctalia msg brightness-up";
+  }
+  XF86MonBrightnessDown               allow-when-locked=true {
+    spawn-sh "noctalia msg brightness-down";
+  }
+}
