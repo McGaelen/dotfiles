@@ -1,8 +1,11 @@
 include "layout.kdl"
 include "window-rules.kdl"
 include "binds.kdl"
+// Machine-specific configs
 include optional=true "input.kdl"
 include optional=true "outputs.kdl"
+// Dynamically created configs (usually by scripts) which may or may not exist, depending on the script.
+include optional=true "screenshare-mode.kdl"
 include optional=true "center-column.kdl"
 
 environment {

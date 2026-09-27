@@ -44,14 +44,12 @@
    },
    "favorites": [
       "applications:helium",
-      "applications:jetbrains-toolbox",
       "applications:obsidian",
       "applications:thunar",
       "applications:discord",
       "applications:steam",
       "applications:com.mitchellh.ghostty",
-      "applications:dev.zed.Zed",
-      "applications:cachyos-pi"
+      "applications:dev.zed.Zed"
    ],
    "providers": {
       "applications": {

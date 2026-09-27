@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
+# @vicinae.schemaVersion 1
+# @vicinae.title Niri - Toggle Center Columns
+# @vicinae.mode silent
 
 path = "#{ENV['HOME']}/.config/niri/center-column.kdl"
 
