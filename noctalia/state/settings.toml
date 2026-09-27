@@ -5,8 +5,8 @@ order = [ "default" ]
 
     [bar.default]
     background_opacity = 0.53999998793005943
-    center = [ "taskbar", "niri-taskbar-minimap" ]
-    end = [ "tray", "notifications", "brightness", "volume", "network", "control-center", "clock", "session" ]
+    center = [ "niri-taskbar-minimap" ]
+    end = [ "tray", "notifications", "control-center", "battery", "clock", "session" ]
     font_family = "Adwaita Sans"
     font_weight = 700
     margin_ends = 0
@@ -17,7 +17,7 @@ order = [ "default" ]
     radius_bottom_left = 0
     radius_bottom_right = 0
     shadow = false
-    start = [ "Vicinae", "workspaces", "media", "privacy" ]
+    start = [ "Vicinae", "workspaces", "privacy" ]
     thickness = 30
     widget_spacing = 14
 
@@ -29,9 +29,10 @@ enable_ddcutil = true
 [calendar]
 
 [control_center]
-sidebar = "none"
+hidden_tabs = [ "media", "system", "power", "weather", "calendar", "notifications", "screen-time" ]
+sidebar = "full"
 sidebar_section = "none"
-width = 600
+width = 780
 
     [control_center.calendar]
     show_events_card = false
@@ -169,11 +170,11 @@ widget_order = [
     [lockscreen_widgets.widget."lockscreen-login-box@winit"]
     box_height = 196.0
     box_width = 810.0
-    cx = 625.5799560546875
+    cx = 634.00030517578125
     cy = 775.56451416015625
     output = "winit"
     placement_height = 1374.0
-    placement_width = 1263.0
+    placement_width = 1280.0
     rotation = 0.0
     type = "login_box"
 
@@ -209,7 +210,7 @@ media = false
 privacy = false
 
 [plugins]
-enabled = [ "mcgaelen/niri-taskbar-minimap" ]
+enabled = [ "mcgaelen/better-control-center", "mcgaelen/niri-taskbar-minimap" ]
 
     [[plugins.source]]
     kind = "git"
@@ -330,6 +331,10 @@ hide_when_no_media = true
 show_label = false
 
 [widget.niri-taskbar-minimap]
+focused_background = "primary"
+focused_text = "on_primary"
+inactive_background = "surface_variant"
+inactive_text = "secondary"
 type = "mcgaelen/niri-taskbar-minimap:niri-taskbar-minimap"
 
 [widget.privacy]
