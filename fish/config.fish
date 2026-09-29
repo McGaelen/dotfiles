@@ -9,7 +9,8 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 fish_add_path ~/.lmstudio/bin
 fish_add_path /opt/jetbrains-toolbox/bin
-fish_add_path ~/bin
+fish_add_path ~/bin # My custom scripts
+fish_add_path "$HOME/.local/bin" # Some tools like to install here
 
 alias cat="bat"
 alias fzf="fzf --style full"
