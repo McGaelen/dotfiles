@@ -1,18 +1,14 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
 
-# set -gx PATH $PATH /home/gaelen/.lmstudio/bin
-# set -gx QT_QPA_PLATFORMTHEME qt6ct
-# set -gx ELECTRON_OZONE_PLATFORM_HINT auto
-# set -gx QT_QPA_PLATFORM "wayland"
-# set -gx QT_WAYLAND_DECORATION
-# set -gx XDG_CURRENT_DESKTOP "XFCE"
+set -gx VISUAL "zeditor"
+set -gx EDITOR "nano"
 
 fish_add_path ~/.lmstudio/bin
 fish_add_path /opt/jetbrains-toolbox/bin
 fish_add_path ~/bin # My custom scripts
 fish_add_path "$HOME/.local/bin" # Some tools like to install here
 
-alias cat="bat"
+alias cat="bat -p"
 alias fzf="fzf --style full"
 alias codium="codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
 alias n="nnn -eHoUzA" # e: open text files in $VISUAL, H:hidden files, o:open on enter key, U:show user/group, z:fuzzy filters, A:disable auto-enter dir

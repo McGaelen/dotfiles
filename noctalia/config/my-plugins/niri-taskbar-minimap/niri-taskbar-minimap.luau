@@ -63,7 +63,7 @@ function render(windowState: WindowState)
     end
   end
 
-  barWidget.render(container({ width = maxWidth, gap = 15, align = "center" }, columns))
+  barWidget.render(container({ width = maxWidth, gap = 5, align = "center" }, columns))
 end
 
 local outputName = barWidget.outputName()
