@@ -1,6 +1,6 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
 
-set -gx VISUAL "zeditor"
+set -gx VISUAL "nano"
 set -gx EDITOR "nano"
 
 fish_add_path ~/.lmstudio/bin
