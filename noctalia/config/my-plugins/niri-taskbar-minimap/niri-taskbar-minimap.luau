@@ -26,7 +26,6 @@ function render(windowState: WindowState)
       if columns[colIdx] == nil then
         columns[colIdx] = container({
           flexGrow = window.layout.tile_size[1],
-          maxWidth = window.layout.tile_size[1],
           borderWidth = 1,
           radius = 20,
           fill = inactiveBackground
@@ -45,7 +44,7 @@ function render(windowState: WindowState)
           align = 'center',
           gap = 5,
           radius = 20,
-          fill = window.is_focused and focusedBackground or inactiveBackground,
+          fill = window.is_focused and #windowState ~= 1 and focusedBackground or inactiveBackground,
           onClick = function() niri.focusWindow(window.id) end,
         }, {
           appIcon and
@@ -56,11 +55,18 @@ function render(windowState: WindowState)
             flexGrow = 1,
             opacity = window.is_focused and 1.0 or 0.75,
             fontSize = 13,
-            color = window.is_focused and focusedText or inactiveText,
+            color = window.is_focused and #windowState ~= 1 and focusedText or inactiveText,
             text = window.title,
           }),
       })
     end
+  end
+
+  -- I hate this code, but I don't know a better way to do it, because of the way the '#' length operator works.
+  -- If there's only one window, don't give it the active state colors, because it's just a little much.
+  if #columns == 1 and #(columns[1].children) == 1 and #(columns[1].children[1].children) == 2 then
+    columns[1].children[1].props.fill = inactiveBackground
+    columns[1].children[1].children[2].props.color = inactiveText
   end
 
   barWidget.render(container({ width = maxWidth, gap = 5, align = "center" }, columns))

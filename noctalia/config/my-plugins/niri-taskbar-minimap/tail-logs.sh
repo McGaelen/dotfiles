@@ -1,1 +1,1 @@
-tail -f ./.cache/noctalia/noctalia.log
+tail -f ~/.cache/noctalia/noctalia.log

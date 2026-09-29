@@ -363,6 +363,7 @@ focused_background = "primary"
 focused_text = "on_primary"
 inactive_background = "surface_variant"
 inactive_text = "secondary"
+max_width = 875
 type = "mcgaelen/niri-taskbar-minimap:niri-taskbar-minimap"
 
 [widget.privacy]

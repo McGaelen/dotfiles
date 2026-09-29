@@ -104,7 +104,7 @@
       "system": {
          "entrypoints": {
             "run": {
-               "alias": "$"
+               "alias": "!"
             },
             "toggle-mute": {
                "enabled": false
