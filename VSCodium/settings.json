@@ -530,5 +530,11 @@
   "git.openRepositoryInParentFolders": "never",
   "terminal.integrated.enableImages": true,
   "zig.zls.enabled": "on",
-  "zig.path": "zig"
+  "zig.path": "zig",
+  "extensions.supportAgentsWindow": {
+    "monokai.theme-monokai-pro-vscode": true
+  },
+  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.iconTheme": "jetbrains-file-icon-theme-auto",
+  "workbench.productIconTheme": "jetbrains-product-icon-theme"
 }
