@@ -528,5 +528,7 @@
   "qt-qml.doNotAskForQmllsDownload": true,
   "terminal.integrated.initialHint": false,
   "git.openRepositoryInParentFolders": "never",
-  "terminal.integrated.enableImages": true
+  "terminal.integrated.enableImages": true,
+  "zig.zls.enabled": "on",
+  "zig.path": "zig"
 }

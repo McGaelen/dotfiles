@@ -12,4 +12,4 @@ gtk-toolbar-style = flat
 notify-on-command-finish = unfocused
 background = #101414
 scrollback-limit = 4000000000
-
+window-decoration = none
