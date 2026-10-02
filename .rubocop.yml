@@ -1,0 +1,4 @@
+Style/SpecialGlobalVars:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false

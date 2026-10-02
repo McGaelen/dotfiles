@@ -8,10 +8,10 @@ fish_add_path /opt/jetbrains-toolbox/bin
 fish_add_path ~/bin # My custom scripts
 fish_add_path "$HOME/.local/bin" # Some tools like to install here
 
+alias ls="eza --color=auto --group-directories-first --icons=auto"
 alias cat="bat -p"
-alias fzf="fzf --style full"
 alias codium="codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
-alias n="nnn -eHoUzA" # e: open text files in $VISUAL, H:hidden files, o:open on enter key, U:show user/group, z:fuzzy filters, A:disable auto-enter dir
+alias nnn="nnn -eHoUzA" # e: open text files in $VISUAL, H:hidden files, o:open on enter key, U:show user/group, z:fuzzy filters, A:disable auto-enter dir
 
 fzf --fish | source
 
@@ -27,18 +27,16 @@ function lll -d "Runs ls -al"
   ls -al $argv
 end
 
-if status is-interactive
-  # Commands to run in interactive sessions can go here
-  function ffiles -d "Interactively search filenames using fd and fzf"
-    fd $argv | fzf --preview 'cat {}' --bind 'enter:execute(open {})'
-  end
-
-  function ftext -d "Interactively search for text in files using ripgrep"
-    rg --files-with-matches --no-messages $argv | \
-    fzf \
-      --preview (string join ' ' 'highlight -O ansi {} | rg --colors "match:bg:yellow" --pretty --context 10 --ignore-case' $argv[(count argv)]) \
-      --bind 'enter:execute(open {})'
-  end
+function fif -d "Find-In-Files: Interactively search for text in files using ripgrep"
+  # Just using fzf for it's TUI. The options list is driven completely by rg - hence the `--disabled` flag.
+  fzf \
+    --disabled \
+    --preview 'bat -p --color always {} | rg --colors "match:bg:yellow" --pretty --context 5 --ignore-case {q}' \
+    --bind 'change:reload(rg -l --no-messages {q})' \
+    --height 60% \
+    --layout reverse \
+    --list-border rounded \
+    --list-label 'Find-In-Files'
 end
 
 # bun

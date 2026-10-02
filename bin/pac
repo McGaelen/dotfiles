@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+subcommand = ARGV[0]
+rest_args = ARGV[1..]&.join ' '
+
+def run(cmd)
+  puts "==> #{cmd}"
+  system cmd
+end
+
+case subcommand
+when 'install', 'i'
+  run "sudo pacman -S #{rest_args}"
+when 'uninstall', 'r'
+  run "sudo pacman -Rsu #{rest_args}"
+when 'update'
+  run 'sudo pacman -Sy'
+when 'list'
+  run "pacman -Qe #{rest_args}"
+when 'info'
+  run "pacman -Sii #{rest_args}"
+when 'prune'
+  run 'sudo pacman -Rns $(pacman -Qtdq)'
+when 'search'
+  run "pacman -Ss #{rest_args}"
+when 'browse'
+  run "pacman -Slq | sort | uniq | \
+    fzf --preview 'pacman -Sii {}' --bind 'enter:execute(sudo pacman -S {})'"
+else
+  run "pacman #{subcommand} #{rest_args}"
+end

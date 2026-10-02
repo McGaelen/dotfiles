@@ -7,6 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "junie": {
+      "default_config_options": {
+        "effort": "medium",
+        "model": "v1:12:jetbrains-ai:gpt-6-luna"
+      },
+      "type": "registry"
+    }
+  },
   "buffer_font_weight": 500.0,
   "cli_default_open_behavior": "existing_window",
   "format_on_save": "off",
@@ -29,26 +38,7 @@
     },
     "TypeScript": {
       "show_edit_predictions": true
-    }
-  },
-  "edit_predictions": {
-    "open_ai_compatible_api": {
-      "max_output_tokens": 1000,
-      "model": "gemma-4-12b-qat",
-      "api_url": "http://localhost:1234"
     },
-    "mode": "subtle",
-    "ollama": {
-      "api_url": "https://ollama.icefish-snares.ts.net",
-      "prompt_format": "code_gemma",
-      "model": "gemma4:e2b"
-    },
-    "provider": "open_ai_compatible_api"
-  },
-  "language_models": {
-    "ollama": {
-      "api_url": "http://unraid:11434"
-    }
   },
   "terminal": {
     "font_weight": 500.0,
@@ -74,14 +64,14 @@
     "default_model": {
       "enable_thinking": false,
       "provider": "lmstudio",
-      "model": "google/gemma-4-12b-qat",
+      "model": "prism-ml/bonsai-27b",
     },
     "model_parameters": [],
   },
   "unnecessary_code_fade": 0.6,
   "buffer_font_family": "IntoneMono Nerd Font",
   "ui_font_family": "Adwaita Sans",
-  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "icon_theme": "Colored Zed Icons Theme Dark",
   "telemetry": {
     "diagnostics": true,
     "metrics": false,
@@ -95,6 +85,9 @@
   "formatter": "auto",
 
   // APPERANCE
+  "buffer_font_features": {
+    "calt": true // Enable ligatures
+  },
   "ui_font_size": 17,
   "buffer_font_size": 15.0,
   "buffer_line_height": {
@@ -105,7 +98,7 @@
   "theme": {
     "mode": "system",
     "light": "Ayu Light",
-    "dark": "VSCode Dark Modern",
+    "dark": "Ayu Dark",
   },
   "theme_overrides": {
     "Ayu Dark": {

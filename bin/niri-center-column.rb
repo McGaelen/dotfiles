@@ -8,9 +8,9 @@ path = "#{ENV['HOME']}/.config/niri/center-column.kdl"
 if File.exist? path
   `rm #{path}`
 else
-  File.write path, <<~EOF
+  File.write path, <<~KDL
     layout {
       center-focused-column "always"
     }
-  EOF
+  KDL
 end
