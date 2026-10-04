@@ -40,6 +40,8 @@ gestures {
 layer-rule {
   match namespace="vicinae"
   match namespace="noctalia-notification"
+  // match namespace="noctalia-bar-default"
+  // match namespace="noctalia-attached-panel"
   background-effect {
     xray false
   }

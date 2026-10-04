@@ -1,12 +1,20 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "active_pane_modifiers": {
+    "border_size": 0
+  },
+  "agent": {
+    "sidebar_side": "right",
+    "default_model": {
+      "enable_thinking": false,
+      "model": "prism-ml/bonsai-27b",
+      "provider": "lmstudio"
+    },
+    "default_profile": "ask",
+    "dock": "right",
+    "model_parameters": [],
+    "show_turn_stats": true
+  },
+  "agent_buffer_font_size": 13,
   "agent_servers": {
     "junie": {
       "default_config_options": {
@@ -16,143 +24,255 @@
       "type": "registry"
     }
   },
-  "buffer_font_weight": 500.0,
-  "cli_default_open_behavior": "existing_window",
-  "format_on_save": "off",
-  "diff_view_style": "unified",
-  "outline_panel": {
-    "dock": "left"
+  "agent_ui_font_size": 17,
+  "auto_update": false,
+  "base_keymap": "JetBrains",
+  "bottom_dock_layout": "contained",
+  "buffer_font_family": "IntoneMono Nerd Font",
+  "buffer_font_features": {
+    "calt": true
   },
+  "buffer_font_size": 15,
+  "buffer_font_weight": 500,
+  "buffer_line_height": {
+    "custom": 1.7
+  },
+  "centered_layout": {
+    "left_padding": 0.2
+  },
+  "cli_default_open_behavior": "existing_window",
   "collaboration_panel": {
     "dock": "left"
   },
-  "git_panel": {
-    "dock": "left"
-  },
-  "languages": {
-    "TOML": {
-      "show_edit_predictions": false
-    },
-    "Kdl": {
-      "show_edit_predictions": false
-    },
-    "TypeScript": {
-      "show_edit_predictions": true
-    },
-  },
-  "terminal": {
-    "font_weight": 500.0,
-    "font_size": 13.0
-  },
   "diagnostics": {
     "inline": {
-      "enabled": true,
-    },
+      "enabled": true
+    }
   },
-  "show_edit_predictions": false,
-  "tab_size": 2,
-  "project_panel": {
-    "folder_indicator": "chevron",
-    "dock": "left",
-    "auto_reveal_entries": false,
-    "hide_root": true,
+  "diff_view_style": "unified",
+  "edit_predictions": {
+    "allow_data_collection": "no"
   },
-  "agent": {
-    "sidebar_side": "right",
-    "dock": "right",
-    "default_profile": "ask",
-    "default_model": {
-      "enable_thinking": false,
-      "provider": "lmstudio",
-      "model": "prism-ml/bonsai-27b",
-    },
-    "model_parameters": [],
-  },
-  "unnecessary_code_fade": 0.6,
-  "buffer_font_family": "IntoneMono Nerd Font",
-  "ui_font_family": "Adwaita Sans",
-  "icon_theme": "Colored Zed Icons Theme Dark",
-  "telemetry": {
-    "diagnostics": true,
-    "metrics": false,
-  },
+  "format_on_save": "off",
+  "formatter": "auto",
   "git": {
     "inline_blame": {
-      "enabled": false,
-    },
+      "enabled": false
+    }
   },
-  "base_keymap": "JetBrains",
-  "formatter": "auto",
-
-  // APPERANCE
-  "buffer_font_features": {
-    "calt": true // Enable ligatures
+  "git_panel": {
+    "dock": "left",
+    "group_by": "staging"
   },
-  "ui_font_size": 17,
-  "buffer_font_size": 15.0,
-  "buffer_line_height": {
-    "custom": 1.7,
+  "icon_theme": {
+    "dark": "Colored Zed Icons Theme Dark",
+    "light": "JetBrains New UI Icons (Light)",
+    "mode": "dark"
   },
-  "agent_buffer_font_size": 13.0,
-  "agent_ui_font_size": 17.0,
+  "outline_panel": {
+    "dock": "left"
+  },
+  "preview_tabs": {
+    "enable_keep_preview_on_code_navigation": true,
+    "enabled": true
+  },
+  "project_panel": {
+    "auto_reveal_entries": false,
+    "dock": "left",
+    "entry_spacing": "standard",
+    "folder_indicator": "chevron",
+    "git_status": true,
+    "hide_root": true
+  },
+  "show_edit_predictions": false,
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": true
+  },
+  "tab_size": 2,
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_close_button": "hover"
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false
+  },
+  "terminal": {
+    "alternate_scroll": "on",
+    "font_family": "IntoneMono Nerd Font",
+    "font_size": 13,
+    "font_weight": 500,
+    "line_height": "standard"
+  },
   "theme": {
-    "mode": "system",
-    "light": "Ayu Light",
     "dark": "Ayu Dark",
+    "light": "Ayu Light",
+    "mode": "dark"
   },
   "theme_overrides": {
     "Ayu Dark": {
-      "text": "#adadad",
-      "editor.gutter.background": "#1a1a1a",
       "editor.background": "#1a1a1a",
-
+      "editor.gutter.background": "#1a1a1a",
+      "background": "#333A4AFF",
+      "text": "#BDBDBDFF",
+      "icon": "#BDBDBDFF",
+      "modified": "#59AAFFFF",
+      "modified.background": "#1A262CFF",
+      "modified.border": "#1B3847FF",
       "syntax": {
-        // "function": {
-        //   "color": "#9A71A8"
-        // },
-        "attributes": {
-          // "color": "#fff"
+        "attribute": {
+          "color": "#BDBDBDFF"
         },
         "boolean": {
-          "color": "#6A8759",
+          "color": "#689A00FF"
         },
-        "string": {
-          "color": "#6A8759",
+        "comment": {
+          "color": "#585858FF"
         },
-        "type": {
-          "color": "#5295A4",
+        "comment.doc": {
+          "color": "#629755FF"
         },
-        "punctuation": {
-          "color": "#CC7832",
+        "constant": {
+          "color": "#916EBDFF"
         },
-        "punctuation.bracket.parenthesis": {
-          // "color": "#CC7832"
+        "constructor": {
+          "color": "#21A1BAFF"
         },
-        "punctuation.delimiter": {
-          "color": "#CC7832",
+        "enum": {
+          "color": "#FFBD57FF"
         },
-        "punctuation.list_marker": {
-          "color": "#CC7832",
+        "function": {
+          "color": "#FFBD57FF"
         },
-        "punctuation.special": {
-          "color": "#CC7832",
+        "keyword": {
+          "color": "#E86620FF"
+        },
+        "link_text": {
+          "color": "#E86620FF"
+        },
+        "link_uri": {
+          "color": "#689A00FF"
+        },
+        "namespace": {
+          "color": "#BDBDBDFF"
+        },
+        "number": {
+          "color": "#689A00FF"
         },
         "operator": {
-          "color": "#CC7832",
+          "color": "#E86620FF"
         },
-        "tag": {
-          "color": "#5295A4",
+        "primary": {
+          "color": "#BDBDBDFF"
         },
         "property": {
-          "color": "#adadad",
+          "color": "#BDBDBDFF"
         },
-        "label": {
-          "color": "#ffffff",
+        "punctuation": {
+          "color": "#E86620FF"
         },
-        "attribute": {
-          "color": "#adadad",
+        "punctuation.bracket": {
+          "color": "#E86620FF"
         },
+        "punctuation.delimiter": {
+          "color": "#E86620FF"
+        },
+        "punctuation.special": {
+          "color": "#E86620FF"
+        },
+        "string": {
+          "color": "#689A00FF"
+        },
+        "string.escape": {
+          "color": "#E86620FF"
+        },
+        "string.regex": {
+          "color": "#689A00FF"
+        },
+        "string.special.symbol": {
+          "color": "#E86620FF"
+        },
+        "tag": {
+          "color": "#21A1BAFF"
+        },
+        "title": {
+          "color": "#BDBDBDFF"
+        },
+        "type": {
+          "color": "#21A1BAFF"
+        },
+        "variable": {
+          "color": "#BDBDBDFF"
+        },
+        "variable.parameter": {
+          "color": "#BDBDBDFF"
+        },
+        "variant": {
+          "color": "#BDBDBDFF"
+        }
       },
-    },
+      "panel.overlay_hover": "#333A4AFF",
+      "version_control.modified": "#59AAFFFF"
+    }
+    // "Ayu Dark": {
+    //   "editor.background": "#1a1a1a",
+    //   "editor.gutter.background": "#1a1a1a",
+    //   "syntax": {
+    //     "attribute": {
+    //       "color": "#BDBDBD"
+    //     },
+    //     "attributes": {},
+    //     "keyword": {
+    //       "color": "#E86620"
+    //     },
+    //     "boolean": {
+    //       "color": "#689A00"
+    //     },
+    //     "label": {
+    //       "color": "#ffffff"
+    //     },
+    //     "operator": {
+    //       "color": "#E86620"
+    //     },
+    //     "property": {
+    //       "color": "#BDBDBD"
+    //     },
+    //     "punctuation": {
+    //       "color": "#E86620"
+    //     },
+    //     "punctuation.bracket.parenthesis": {},
+    //     "punctuation.delimiter": {
+    //       "color": "#E86620"
+    //     },
+    //     "punctuation.list_marker": {
+    //       "color": "#E86620"
+    //     },
+    //     "punctuation.special": {
+    //       "color": "#E86620"
+    //     },
+    //     "string": {
+    //       "color": "#689A00"
+    //     },
+    //     "tag": {
+    //       "color": "#21A1BA"
+    //     },
+    //     "type": {
+    //       "color": "#21A1BA"
+    //     }
+    //   },
+    //   "text": "#BDBDBD"
+    // }
   },
+  "title_bar": {
+    "show_branch_status_icon": true,
+    "show_menus": false,
+    "show_project_items": true,
+    "show_sign_in": false
+  },
+  "ui_font_size": 17,
+  "unnecessary_code_fade": 0.6,
+  "use_system_window_tabs": false,
+  "zoomed_padding": true
 }
