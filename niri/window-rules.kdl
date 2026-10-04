@@ -23,7 +23,7 @@ window-rule {
   open-fullscreen true
 }
 
-// ========= Floating Windows ========= 
+// ========= Floating Windows =========
 window-rule {
   match is-floating=true
   border { off; }
@@ -53,7 +53,7 @@ window-rule {
 
 // Windows to open floating as default
 window-rule {
-  match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+  match title="^[Pp]icture[- ]in[- ][Pp]icture$"
   match app-id="thunar"
   match app-id="com.github.finefindus.eyedropper"
   match app-id="it.mijorus.gearlever"
