@@ -114,9 +114,10 @@
   },
   "theme_overrides": {
     "Ayu Dark": {
-      "editor.background": "#1a1a1a",
-      "editor.gutter.background": "#1a1a1a",
-      "background": "#333A4AFF",
+      "editor.background": "#17191E",
+      "editor.gutter.background": "#17191E",
+      "tab.active_background": "#17191E",
+      "toolbar.background": "#17191E",
       "text": "#BDBDBDFF",
       "icon": "#BDBDBDFF",
       "modified": "#59AAFFFF",
