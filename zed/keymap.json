@@ -5,17 +5,67 @@
 //
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
+
+// Gaelen:
+// All possible Editor Modes are NOT DOCUMENTED. Here's what I found in the code:
+// full - the normal editor used for files.
+// single_line(?) - maybe a regular textbox?
+// auto_height - I believe this is basically an <input type="textarea">
+// minimap - I guess the minimap is also an Editor?
+// https://github.com/zed-industries/zed/blob/8fda6e46539bdf056e3e326cfcab7deea831ff40/crates/go_to_line/src/cursor_position.rs#L105
+
 [
   {
     "context": "Workspace",
     "bindings": {
-      "shift shift": "file_finder::Toggle",
-    },
+      "shift shift": "file_finder::Toggle"
+    }
+  },
+
+  // These make shift-enter select previous occurence when using ctrl+f.
+  // It's already in the base JetBrains keymap, but we have to remove
+  // some other conflicting keybinds for it to work.
+  {
+    "context": "Pane",
+    "unbind": {
+      "cmd-shift-g": "search::SelectPreviousMatch"
+    }
   },
   {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      // "j k": "vim::NormalBefore"
-    },
+    "context": "Editor && mode == auto_height",
+    "unbind": {
+      "shift-enter": "editor::Newline"
+    }
   },
+  {
+    "context": "BufferSearchBar > Editor",
+    "unbind": {
+      "shift-enter": "editor::NewlineBelow"
+    }
+  },
+
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-shift-enter": "editor::NewlineAbove"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-r": "projects::OpenRecent"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-r": "task::Spawn"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-alt-r": "task::Spawn"
+    }
+  }
 ]
