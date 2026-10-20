@@ -1,10 +1,10 @@
 layout {
-  gaps 10
+  gaps 2
   struts {
-    top -10
-    left -10
-    right -10
-    bottom -10
+    top -2
+    left -2
+    right -2
+    bottom -2
   }
 
   always-center-single-column
@@ -19,12 +19,12 @@ layout {
   default-column-width {}
 
   focus-ring { off; }
-  
+
   border {
     on
-    width 2
+    width 1
   }
-  
+
   tab-indicator {
     place-within-column
     gap 0
@@ -34,7 +34,7 @@ layout {
     length total-proportion=0.9
     corner-radius 14
   }
-  
+
   // <- needed for noctalia-shell to set wallpaper
   background-color "transparent"
 }

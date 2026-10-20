@@ -1,11 +1,22 @@
 {
+  "use_system_path_prompts": false,
+  "use_system_prompts": false,
+  "global_lsp_settings": {
+    "semantic_token_rules": [
+      {
+        "token_type": ""
+      }
+    ]
+  },
   "cursor_shape": "block",
   "semantic_tokens": "combined",
   "active_pane_modifiers": {
     "border_size": 0
   },
   "agent": {
-    "sidebar_side": "right",
+    "threads_sidebar": {
+      "position": "right"
+    },
     "default_model": {
       "enable_thinking": false,
       "model": "prism-ml/bonsai-27b",
@@ -102,6 +113,7 @@
     "metrics": false
   },
   "terminal": {
+    "keep_selection_on_copy": false,
     "alternate_scroll": "on",
     "font_family": "IntoneMono Nerd Font",
     "font_size": 13,
@@ -114,6 +126,10 @@
     "mode": "dark"
   },
   "theme_overrides": {
+    "Darcula Minimal": {
+      "terminal.background": "#17191E",
+      "terminal.foreground": "#BDBDBD"
+    },
     "Ayu Dark": {
       "editor.background": "#17191E",
       "editor.gutter.background": "#17191E",
