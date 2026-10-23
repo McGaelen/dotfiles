@@ -5,11 +5,9 @@ binds {
   // Vicinae
   Mod+Space hotkey-overlay-title="Run an Application: vicinae" {
     spawn "vicinae" "open";
-//     spawn "dms" "ipc" "call" "spotlight" "toggle"
   }
   Mod+Shift+V repeat=false {
     spawn "vicinae" "vicinae://launch/clipboard/history";
-//     spawn "dms" "ipc" "call" "clipboard" "toggle"
   }
   Mod+Ctrl+Space repeat=false {
     spawn "vicinae" "vicinae://launch/core/search-emojis";
@@ -63,7 +61,8 @@ binds {
   Mod+2 { set-column-width "33.33333333333333333334%"; }
   Mod+3 { set-column-width "50%"; }
   Mod+4 { set-column-width "66.66666666666666666667%"; }
-  Mod+5 { maximize-window-to-edges; }
+  Mod+5 { set-column-width "100%"; }
+  Mod+Ctrl+5 {  maximize-window-to-edges; }
   Mod+Shift+1 { set-window-height "25%"; }
   Mod+Shift+2 { set-window-height "33%"; }
   Mod+Shift+3 { set-window-height "50%"; }
@@ -93,10 +92,6 @@ binds {
   // Session controls
   Mod+Shift+E { quit; }
   Ctrl+Alt+Delete { spawn-sh "ghostty"; }
-
-  // Powers off the monitors. To turn them back on, do any input like
-  // moving the mouse or pressing any other key.
-  Mod+Shift+P { power-off-monitors; }
 
   // ─── Media Controls ───
   XF86AudioRaiseVolume                allow-when-locked=true {
