@@ -5,17 +5,20 @@
 
 require 'json'
 
-hostname = `hostname`
+def toggle_scale(monitor, default_scale, expanded_scale)
+  json = JSON.parse(`niri msg --json outputs`)
+  scale = json[monitor]['logical']['scale']
+  new_scale = scale == default_scale ? expanded_scale : default_scale
 
-if hostname == 'Gaelens-LinuxPC'
-  toggle_scale({ monitor: 'DP-1', default_scale: 1.75, expanded_scale: 1.35 })
-elsif hostname == 'Gaelens-Framework13'
-  toggle_scale({ monitor: 'eDP-1', default_scale: 1.75, expanded_scale: 1.35 })
+  `niri msg output DP-1 scale #{new_scale}`
+
+  puts "Scale set to #{new_scale}"
 end
 
-def toggle_scale(args)
-  json = JSON.parse(`niri msg --json outputs`)
-  scale = json[args.monitor]['logical']['scale']
+hostname = `hostname`.chomp
 
-  `niri msg output DP-1 scale #{scale == args.default_scale ? args.expanded_scale : args.default_scale}`
+if hostname == 'Gaelens-LinuxPC'
+  toggle_scale 'DP-1', 1.75, 1.35
+elsif hostname == 'Gaelens-Framework13'
+  toggle_scale 'eDP-1', 1.75, 1.35
 end
