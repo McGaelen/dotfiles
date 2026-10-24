@@ -55,6 +55,7 @@
   },
   "cli_default_open_behavior": "existing_window",
   "collaboration_panel": {
+    "button": false,
     "dock": "left"
   },
   "diagnostics": {
