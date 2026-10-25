@@ -75,6 +75,7 @@ binds {
 
   // Toggle column centering
   Mod+T { spawn-sh "niri-center-column.rb"; }
+  Mod+equal { spawn-sh "niri-toggle-scale.rb"; }
 
   // Screenshots
   Mod+Shift+S { screenshot; }
