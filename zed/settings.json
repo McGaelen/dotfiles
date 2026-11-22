@@ -1,4 +1,27 @@
 {
+  "ssh_connections": [
+    {
+      "host": "gaelens-linuxpc",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/gaelen/dev/scripting-lang"
+          ]
+        },
+        {
+          "paths": [
+            "/home/gaelen/dev/shell"
+          ]
+        },
+        {
+          "paths": [
+            "/home/gaelen/dotfiles"
+          ]
+        }
+      ]
+    }
+  ],
   "use_system_path_prompts": false,
   "use_system_prompts": false,
   "global_lsp_settings": {
