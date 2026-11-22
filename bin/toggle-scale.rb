@@ -9,9 +9,9 @@ def main
   hostname = `hostname`.chomp
 
   if hostname == 'Gaelens-LinuxPC'
-    toggle_scale 'DP-1', 1.75, 1.35
+    toggle_scale 'DP-1', 1, 1.35
   elsif hostname == 'Gaelens-Framework13'
-    toggle_scale 'eDP-1', 1.75, 1.35
+    toggle_scale 'eDP-1', 1.5, 1.35
   end
 end
 
