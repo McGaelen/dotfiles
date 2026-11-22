@@ -16,6 +16,9 @@
    "input_server": {
       "enabled": false
    },
+   "tray": {
+      "enabled": false
+   },
    "font": {
       "rendering": "native",
       "normal": {
@@ -40,12 +43,13 @@
          "layer": "overlay",
          "keyboard_interactivity": "exclusive",
          "enabled": true
-      }
+      },
+      "material": "blur"
    },
    "favorites": [
+      "applications:com.system76.CosmicFiles",
       "applications:helium",
       "applications:obsidian",
-      "applications:thunar",
       "applications:discord",
       "applications:steam",
       "applications:com.mitchellh.ghostty",
@@ -103,8 +107,21 @@
       },
       "system": {
          "entrypoints": {
+            "browse-apps": {
+               "enabled": true,
+               "preferences": {
+                  "sortAlphabetically": true,
+                  "showHidden": true
+               }
+            },
             "run": {
                "alias": "!"
+            },
+            "set-default-browser": {
+               "enabled": false
+            },
+            "set-default-terminal": {
+               "enabled": false
             },
             "toggle-mute": {
                "enabled": false

@@ -1,4 +1,4 @@
-config_version = 15
+config_version = 16
 
 [audio]
 enable_sounds = false
@@ -9,16 +9,15 @@ order = [ "default" ]
     [bar.default]
     auto_hide = true
     background_opacity = 0.53999998793005943
-    center = [ "niri-taskbar-minimap" ]
+    center = []
     concave_edge_corners = false
     contact_shadow = true
-    end = [ "tray", "notifications", "control-center", "battery", "clock", "session" ]
+    end = [ "media", "tray", "notifications", "control-center", "battery", "clock", "session" ]
     font_family = "Adwaita Sans"
     font_weight = 700
     margin_ends = 0
     padding = 10
     panel_overlap = 0
-    position = "bottom"
     radius = 14
     radius_bottom_left = 0
     radius_bottom_right = 0
@@ -26,7 +25,7 @@ order = [ "default" ]
     radius_top_right = 0
     reserve_space = false
     show_on_workspace_switch = false
-    start = [ "Vicinae", "workspaces", "privacy" ]
+    start = [ "Vicinae", "workspaces", "privacy", "taskbar" ]
     thickness = 30
     widget_spacing = 14
 
@@ -45,6 +44,9 @@ width = 780
 
     [control_center.calendar]
     show_events_card = false
+
+    [control_center.media]
+    show_visualizer = false
 
     [[control_center.shortcuts]]
     type = "caffeine"
@@ -90,16 +92,16 @@ widget_order = [
     [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
     box_height = 196.0
     box_width = 720.0
-    cx = 1097.0
-    cy = 1342.099609375
+    cx = 1280.0
+    cy = 1321.0010986328125
     output = "DP-1"
-    placement_height = 1463.0
-    placement_width = 2194.0
+    placement_height = 1440.0
+    placement_width = 2560.0
     rotation = 0.0
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -127,7 +129,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -155,7 +157,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-3".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -183,7 +185,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-5".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -211,7 +213,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -239,7 +241,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@winit".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -296,9 +298,6 @@ polkit_agent = true
     [shell.animation]
     speed = 3.0000000447034836
 
-    [shell.greeter_sync]
-    auto_sync = true
-
     [shell.panel]
     open_near_click_control_center = true
     open_near_click_session = true
@@ -353,20 +352,20 @@ wallpaper_scheme = "m3-tonal-spot"
     builtin_ids = [ "btop", "gtk3", "gtk4", "niri", "qt" ]
     community_ids = [ "vicinae" ]
 
-[wallpaper]
-directory = "/usr/share/wallpapers"
+[wallpaper.default]
+path = "/home/gaelen/Pictures/valheim lox.jpeg"
 
-    [wallpaper.default]
-    path = "/usr/share/wallpapers/cachyos-wallpapers/Dimensions.png"
+[wallpaper.last]
+path = "/home/gaelen/Pictures/valheim lox.jpeg"
 
-    [wallpaper.last]
-    path = "/usr/share/wallpapers/cachyos-wallpapers/Dimensions.png"
+[wallpaper.monitor.DP-2]
+fill_color = "#000000"
 
-    [wallpaper.monitors.DP-1]
-    path = "/usr/share/wallpapers/cachyos-wallpapers/Dimensions.png"
+[wallpaper.monitors.DP-1]
+path = "/home/gaelen/Pictures/valheim lox.jpeg"
 
-    [wallpaper.monitors.DP-2]
-    path = "/usr/share/wallpapers/cachyos-wallpapers/Dimensions.png"
+[wallpaper.monitors.DP-2]
+path = "/home/gaelen/Pictures/valheim lox.jpeg"
 
 [widget.Vicinae]
 glyph = "apps-filled"
@@ -374,7 +373,7 @@ tooltip = "Launcher"
 type = "custom_button"
 
     [widget.Vicinae.actions]
-    left = "exec vicinae open"
+    left = "exec vicinae toggle"
 
 [widget.brightness]
 show_label = false
@@ -391,14 +390,6 @@ hide_when_no_media = true
 [widget.network]
 show_label = false
 
-[widget.niri-taskbar-minimap]
-focused_background = "primary"
-focused_text = "on_primary"
-inactive_background = "surface_variant"
-inactive_text = "secondary"
-max_width = 875
-type = "mcgaelen/niri-taskbar-minimap:niri-taskbar-minimap"
-
 [widget.privacy]
 hide_inactive = true
 inactive_color = "on_primary"
@@ -410,8 +401,8 @@ color = "error"
 capsule_border = "primary"
 capsule_padding = 19
 capsule_radius = "auto"
-enabled = false
 icon_scale = 1.5
+show_all_outputs = true
 show_window_title = true
 window_title_max_width = 150
 
