@@ -1,4 +1,4 @@
-config_version = 16
+config_version = 20
 
 [audio]
 enable_sounds = false
@@ -7,7 +7,6 @@ enable_sounds = false
 order = [ "default" ]
 
     [bar.default]
-    auto_hide = true
     background_opacity = 0.53999998793005943
     center = []
     concave_edge_corners = false
@@ -25,6 +24,7 @@ order = [ "default" ]
     radius_top_right = 0
     reserve_space = false
     show_on_workspace_switch = false
+    smart_auto_hide = true
     start = [ "Vicinae", "workspaces", "privacy", "taskbar" ]
     thickness = 30
     widget_spacing = 14
@@ -62,6 +62,12 @@ width = 780
 
     [[control_center.shortcuts]]
     type = "system"
+
+[dock]
+background_opacity = 0.53999998793005943
+icon_shadow = true
+magnification = false
+pinned = [ "com.system76.CosmicFiles" ]
 
 [idle]
 behavior_order = [ "lock-and-suspend" ]
@@ -265,11 +271,14 @@ force = true
 background_opacity = 0.69999998435378075
 layer = "overlay"
 
-[osd.kinds]
-keyboard_layout = false
-lock_keys = false
-media = false
-privacy = false
+[osd]
+background_opacity = 0.69999998435378075
+
+    [osd.kinds]
+    keyboard_layout = false
+    lock_keys = false
+    media = false
+    privacy = false
 
 [plugins]
 enabled = [ "mcgaelen/better-control-center", "mcgaelen/niri-taskbar-minimap" ]
@@ -353,10 +362,10 @@ wallpaper_scheme = "m3-tonal-spot"
     community_ids = [ "vicinae" ]
 
 [wallpaper.default]
-path = "/home/gaelen/Pictures/valheim lox.jpeg"
+path = "/home/gaelen/dotfiles/wallpapers/valheim lox.jpeg"
 
 [wallpaper.last]
-path = "/home/gaelen/Pictures/valheim lox.jpeg"
+path = "/home/gaelen/dotfiles/wallpapers/valheim lox.jpeg"
 
 [wallpaper.monitor.DP-2]
 fill_color = "#000000"
