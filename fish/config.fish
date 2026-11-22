@@ -48,7 +48,9 @@ function fif -d "Find-In-Files: Interactively search for text in files using rip
   # Just using fzf for it's TUI. The options list is driven completely by rg - hence the `--disabled` flag.
   fzf \
     --disabled \
-    --preview 'bat -p --color always {} | rg --colors "match:bg:yellow" --pretty --context 5 --ignore-case {q}' \
+    --preview 'bat -p --color always {} | rg --colors "match:bg:yellow" --pretty --context 5 --ignore-case --hidden {q}' \
+    --preview-window bottom \
+    --bind 'change:reload(rg -l --no-messages --hidden {q})' \
     --bind 'change:reload(rg -l --no-messages {q})' \
     --height 60% \
     --layout reverse \
