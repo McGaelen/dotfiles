@@ -361,20 +361,23 @@ wallpaper_scheme = "m3-tonal-spot"
     builtin_ids = [ "btop", "gtk3", "gtk4", "niri", "qt" ]
     community_ids = [ "vicinae" ]
 
-[wallpaper.default]
-path = "/home/gaelen/dotfiles/wallpapers/valheim lox.jpeg"
+[wallpaper]
+directory = "/home/gaelen/dotfiles/wallpapers"
 
-[wallpaper.last]
-path = "/home/gaelen/dotfiles/wallpapers/valheim lox.jpeg"
+    [wallpaper.default]
+    path = "/home/gaelen/dotfiles/wallpapers/valheim lox.jpeg"
 
-[wallpaper.monitor.DP-2]
-fill_color = "#000000"
+    [wallpaper.last]
+    path = "/home/gaelen/dotfiles/wallpapers/valheim lox.jpeg"
 
-[wallpaper.monitors.DP-1]
-path = "/home/gaelen/Pictures/valheim lox.jpeg"
+    [wallpaper.monitor.DP-2]
+    fill_color = "#000000"
 
-[wallpaper.monitors.DP-2]
-path = "/home/gaelen/Pictures/valheim lox.jpeg"
+    [wallpaper.monitors.DP-1]
+    path = "/home/gaelen/dotfiles/wallpapers/valheim lox.jpeg"
+
+    [wallpaper.monitors.DP-2]
+    path = "/home/gaelen/dotfiles/wallpapers/valheim lox.jpeg"
 
 [widget.Vicinae]
 glyph = "apps-filled"
