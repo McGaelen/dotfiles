@@ -56,6 +56,22 @@
       "applications:dev.zed.Zed"
    ],
    "providers": {
+      "ai": {
+         "preferences": {
+            "providers": {
+               "lmstudio": {
+                  "type": "openai-compatible",
+                  "fields": {
+                     "name": "lmstudio",
+                     "url": "http://localhost:1234/v1"
+                  }
+               }
+            },
+            "defaultModel": "lmstudio:qwen3.8-27b",
+            "instructions": "",
+            "enableTools": true
+         }
+      },
       "applications": {
          "preferences": {
             "paths": [
@@ -70,6 +86,9 @@
                "enabled": true
             }
          }
+      },
+      "browser-extension": {
+         "enabled": false
       },
       "clipboard": {
          "preferences": {
