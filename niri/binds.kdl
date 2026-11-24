@@ -74,8 +74,8 @@ binds {
   Mod+Shift+R { switch-focus-between-floating-and-tiling; }
 
   // Toggle column centering
-  Mod+T { spawn-sh "niri-center-column.rb"; }
-  Mod+equal { spawn-sh "toggle-scale.rb"; }
+  Mod+T { spawn-sh "niri-center-column"; }
+  Mod+equal { spawn-sh "toggle-scale"; }
 
   // Screenshots
   Mod+Shift+S { screenshot; }

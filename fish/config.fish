@@ -13,6 +13,7 @@ alias lll="ls -al"
 alias cat="bat -p"
 alias codium="codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
 alias nnn="nnn -eHoUzA" # e: open text files in $VISUAL, H:hidden files, o:open on enter key, U:show user/group, z:fuzzy filters, A:disable auto-enter dir
+alias froot="fd --base-directory / --exclude '/mnt/**'"
 
 fzf --fish | source
 

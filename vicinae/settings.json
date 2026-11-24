@@ -47,13 +47,13 @@
       "material": "blur"
    },
    "favorites": [
-      "applications:com.system76.CosmicFiles",
       "applications:helium",
-      "applications:obsidian",
-      "applications:discord",
+      "applications:com.system76.CosmicFiles",
       "applications:steam",
-      "applications:com.mitchellh.ghostty",
-      "applications:dev.zed.Zed"
+      "applications:discord",
+      "applications:dev.zed.Zed",
+      "applications:obsidian",
+      "applications:com.mitchellh.ghostty"
    ],
    "providers": {
       "ai": {
