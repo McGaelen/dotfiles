@@ -342,6 +342,10 @@ polkit_agent = true
     open_near_click_wallpaper = true
     transparency_mode = "glass"
 
+    [shell.screen_corners]
+    enabled = true
+    size = 28
+
     [[shell.session.actions]]
     action = "lock"
     countdown_seconds = 0.0
