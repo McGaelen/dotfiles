@@ -62,3 +62,6 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# Added by LM Studio CLI tool (lms)
+set -gx PATH $PATH /home/gaelen/.lmstudio/bin

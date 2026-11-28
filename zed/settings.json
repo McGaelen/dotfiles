@@ -1,4 +1,9 @@
 {
+  "language_models": {
+    "lmstudio": {
+      "api_url": "http://localhost:1234/api/v0"
+    }
+  },
   "ssh_connections": [
     {
       "host": "gaelens-linuxpc",
@@ -42,7 +47,7 @@
     },
     "default_model": {
       "enable_thinking": false,
-      "model": "prism-ml/bonsai-27b",
+      "model": "qwen3.8-27b",
       "provider": "lmstudio"
     },
     "default_profile": "ask",
